@@ -1,4 +1,6 @@
 SoundBlast
 ==========
 
-2D Arcade Shooter
+SoundBlast ist an 2D-Space-Arcade-Shooter with Music-Based Levels!
+
+-Sebastian Esberger
