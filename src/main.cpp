@@ -7,6 +7,7 @@ int WinMain()
 {
 
 	Game game;
+	game.Init();
 	game.Run();
 	game.Close();
 	

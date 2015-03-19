@@ -1,3 +1,5 @@
+#pragma once
+
 #include "SFML\Graphics.hpp"
 
 class Shot : public sf::Drawable

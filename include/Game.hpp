@@ -1,3 +1,5 @@
+#pragma once
+
 #include "SFML\Graphics.hpp"
 #include "SFML\Audio.hpp"
 #include "Ship.hpp"
@@ -29,6 +31,8 @@ private:
 	void					loadTextures();
 	void					loadSoundBuffers();
 	void					loadFonts();
+
+	void					setTextures();
 
 	sf::ContextSettings		windowSettings;
 	sf::RenderWindow		gameWindow;

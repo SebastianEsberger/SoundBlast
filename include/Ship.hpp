@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Shot.hpp"
 #include <string>
 #include <list>

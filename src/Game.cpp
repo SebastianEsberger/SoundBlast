@@ -19,11 +19,7 @@ Game::~Game()
 bool Game::Init()
 {
 	Game::loadTextures();
-	
-	background.setTexture(mTextureHolder.get("background"));
-	shotSprite.setTexture(mTextureHolder.get("shot"));
-	gameMouse.setTexture(mTextureHolder.get("cursor"));
-	playerShip.setTexture(mTextureHolder.get("wingsquad"));
+	Game::setTextures();
 
 	Game::loadSoundBuffers();
 
@@ -40,13 +36,12 @@ bool Game::Init()
 
 	if(!gameMusic.openFromFile("media/music/Nero - Innocence.wav"))
 	{
-		return false;
-	}
-	if(!gameMouse.Init())
-	{
-		return false;
+		//TODO: Logger should say that file is not available or not at right place -> create Logger first
 	}
 
+	gameMouse.Init();
+
+	//For now, just return true. Later, when real critical loading is implemented -> redesign
 	return true;
 }
 
@@ -188,4 +183,12 @@ void Game::loadSoundBuffers()
 void Game::loadFonts()
 {
 	mFontHolder.load("photonica","media/fonts/Photonica_regular.ttf");
+}
+
+void Game::setTextures()
+{
+	background.setTexture(mTextureHolder.get("background"));
+	shotSprite.setTexture(mTextureHolder.get("shot"));
+	gameMouse.setTexture(mTextureHolder.get("cursor"));
+	playerShip.setTexture(mTextureHolder.get("wingsquad"));
 }
